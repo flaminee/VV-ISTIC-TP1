@@ -70,23 +70,3 @@ The author verified the specification using a formal verification tool called Is
 However, testing is still necessary, they can identify programming errors that are not covered by the formal specification.
 
 
-[CNN Article](https://edition.cnn.com/2019/01/29/tech/facetime-bug-teen-discovery/index.html)
-
-
-The article is titled "This 14-year old found Apple’s FaceTime bug before it went viral " and it was published on CNN website on January 30, 2019. 
-The bug allowed a caller to hear the audio from the recipient's iPhone before they answered the call, and in some cases, even see video from the recipient's phone. The issue was discovered by a 14-year-old boy from Arizona, who was trying to set up a group chat in FaceTime with his friends. When he realized he could hear audio from a friend's phone before the friend had even answered the call.
-Apple initially responded to the bug by disabling the group chat feature in FaceTime, and later released a software update to fix the issue. The article notes that the incident raised questions about how thoroughly Apple tests its software before releasing it to the public, and whether the company is doing enough to prioritize user privacy and security.
-This highlighted the need to conduct rigorous testing before launching any feature on a consumer product. This would have enabled Apple to fix the bug before customers were affected and before it had a negative impact on the company's image.
-
-
-
-
-
-
-
-
-
-
-
-
-
