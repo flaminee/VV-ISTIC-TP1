@@ -11,3 +11,82 @@
 5.  Shortly after the appearance of WebAssembly another paper proposed a mechanized specification of the language using Isabelle. The paper can be consulted here: https://www.cl.cam.ac.uk/~caw77/papers/mechanising-and-verifying-the-webassembly-specification.pdf. This mechanized specification complements the first formalization attempt from the paper. According to the author of this second paper, what are the main advantages of the mechanized specification? Did it help improving the original formal specification of the language? What other artifacts were derived from this mechanized specification? How did the author verify the specification? Does this new specification removes the need for testing?
 
 ## Answers
+
+### 1. Article reporting the discovery of a software bug : [Lien CNN Article](https://edition.cnn.com/2019/01/29/tech/facetime-bug-teen-discovery/index.html)
+
+The article is titled "This 14-year old found Apple’s FaceTime bug before it went viral " and it was published on CNN website on January 30, 2019. 
+
+The bug allowed a caller to hear the audio from the recipient's iPhone before they answered the call, and in some cases, even see video from the recipient's phone. The issue was discovered by a 14-year-old boy from Arizona, who was trying to set up a group chat in FaceTime with his friends. When he realized he could hear audio from a friend's phone before the friend had even answered the call.
+
+Apple initially responded to the bug by disabling the group chat feature in FaceTime, and later released a software update to fix the issue. The article notes that the incident raised questions about how thoroughly Apple tests its software before releasing it to the public, and whether the company is doing enough to prioritize user privacy and security.
+
+This highlighted the need to conduct rigorous testing before launching any feature on a consumer product. This would have enabled Apple to fix the bug before customers were affected and before it had a negative impact on the company's image.
+
+### 2. The collection bug 814 :  [Lien bug](https://issues.apache.org/jira/projects/COLLECTIONS/issues/COLLECTIONS-814?filter=doneissues&orderby=updated+DESC)
+
+The collection bug 814  is a local bug that occurred when the CollectionUtils.removeAll() method is called with an empty first parameter, but the method does not throw the appropriate NullPointerException. Instead, it throws an IllegalArgumentException, which does not clearly reflect the issue.
+
+The solution to this bug involves updating the CollectionUtils.removeAll() method to throw the appropriate NullPointerException when called with an empty first parameter. To do this, the developers modified the code to include a null check on the first parameter before performing any operations. If the first parameter is null, then the correct exception is thrown. The project contributors added new tests to ensure that the bug is detected if it reoccurs in the future.
+
+### 3. Netflix : Chaos Engineering
+
+experiments conducted by Netflix can be : 
+
+- Terminating virtual machine instances,
+- Injecting latency into requests between services,
+- Failing requests
+- Using malformed values in runtime configuration parameters,
+- Failing internal services,
+- Making an entire Amazon region unavailable.
+
+To successfully conduct Chaos Engineering experiments, it is important to build a hypothesis around steady state behavior, vary real-world events, run experiments in production, and automate experiments to run continuously.
+
+During Chaos Engineering experiments, Netflix engineers closely monitor variables such as SPS (stream starts per second) and new account signups per second to identify unexpected changes that may indicate a problem with the system. They also observe request latency and CPU utilization to detect any signs of degraded mode operation that may not be apparent from the user's perspective.
+
+Through their Chaos Engineering experiments, Netflix found that their system was able to provide content even under difficult conditions, demonstrating its resilience. They also discovered that Chaos Engineering tests were more effective in improving system reliability than traditional failover tests.
+
+Many other companies, such as Amazon, Google, Facebook, and Microsoft, have also adopted this technique to improve the reliability of their systems. By simulating outages such as server failure, network congestion, or system overload. The system variables to be observed during experiments may include response times.
+
+### 4. WebAssembly : Formal Specification
+
+#### the main advantages of having a formal specification for WebAssembly.
+
+*Clarity and understanding*: A formal specification provides a precise and explicit definition of the syntax, semantics, and behavior of the language. This helps developers better understand how to use WebAssembly effectively and avoid costly programming errors.
+
+*Interoperability*: A formal specification ensures that all implementations of WebAssembly follow the same rules, making it easier to achieve interoperability between different platforms and tools. Developers can be assured that their code will work the same way on all platforms that support WebAssembly.
+
+*Security*:  Specifications can include strict rules for memory manipulation, exception handling, and access to system resources. This can help reduce the risk of security vulnerabilities and exploits. Developers can use the specification to ensure that their code adheres to WebAssembly security policies.
+
+#### does this mean that WebAssembly implementations should not be tested?
+
+This does not mean that WebAssembly implementations should not be tested. Testing allows for verifying that the implementation adheres to the established rules in the specification and that it works correctly in different contexts. 
+
+### 5. Isabelle/HOL
+
+The mechanized specification indeed helped to improve the original formal specification of the language by identifying several design errors and providing formal proofs of their correction. By using formal verification tools, it is possible to mathematically prove the correctness of the specification.
+
+The author verified the specification using a formal verification tool called Isabelle/HOL. The formal proofs generated by this tool ensure that the specification is correct and consistent.
+
+However, testing is still necessary, they can identify programming errors that are not covered by the formal specification.
+
+
+[CNN Article](https://edition.cnn.com/2019/01/29/tech/facetime-bug-teen-discovery/index.html)
+
+
+The article is titled "This 14-year old found Apple’s FaceTime bug before it went viral " and it was published on CNN website on January 30, 2019. 
+The bug allowed a caller to hear the audio from the recipient's iPhone before they answered the call, and in some cases, even see video from the recipient's phone. The issue was discovered by a 14-year-old boy from Arizona, who was trying to set up a group chat in FaceTime with his friends. When he realized he could hear audio from a friend's phone before the friend had even answered the call.
+Apple initially responded to the bug by disabling the group chat feature in FaceTime, and later released a software update to fix the issue. The article notes that the incident raised questions about how thoroughly Apple tests its software before releasing it to the public, and whether the company is doing enough to prioritize user privacy and security.
+This highlighted the need to conduct rigorous testing before launching any feature on a consumer product. This would have enabled Apple to fix the bug before customers were affected and before it had a negative impact on the company's image.
+
+
+
+
+
+
+
+
+
+
+
+
+
